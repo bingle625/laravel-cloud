@@ -12,6 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*
+ * Frontend Routes
+ */
+Route::group(['as' => 'frontend.'], function () {
+    includeRouteFiles(__DIR__.'/frontend/');
+});
 
 Route::get('/', function () {
     return view('welcome');
